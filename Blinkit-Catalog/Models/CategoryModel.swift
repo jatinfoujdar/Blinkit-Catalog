@@ -12,7 +12,7 @@ struct Product{
 }
 
 
-struct CategoryModel{
+struct Category{
     let name: String
     let image: String
     let products: [Product]
