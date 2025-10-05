@@ -86,11 +86,14 @@ class CategoryListCell: UICollectionViewCell {
 
     // MARK: - Public Configuration
 
-    func configure(with title: String, image: UIImage?, isSelected: Bool) {
-        nameLabel.text = title
-        imageView.image = image
-        selectionIndicator.isHidden = !isSelected
+    func configure(with category: Category, isSelected: Bool) {
+        imageView.image = UIImage(named: category.image)
+        nameLabel.text = category.name // ✅ Use the correct label
+        contentView.backgroundColor = isSelected ? .systemYellow : .white
+        
     }
+
+    
 }
 
 
